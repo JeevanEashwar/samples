@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="sol_AR__system" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1vb-ch-wiq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gV8-Ns-B5K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-pv-3Qo">
+                                <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vUo-HD-WpH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Add Planet">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlanet:" destination="BV1-FR-VrT" eventType="touchUpInside" id="VI9-WQ-KzN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0kf-pv-3Qo" firstAttribute="leading" secondItem="T9J-Bi-lPm" secondAttribute="leading" id="3Lv-c9-8Oc"/>
+                            <constraint firstItem="0kf-pv-3Qo" firstAttribute="bottom" secondItem="T9J-Bi-lPm" secondAttribute="bottom" constant="-20" id="D99-Tw-Atc"/>
+                            <constraint firstItem="gV8-Ns-B5K" firstAttribute="trailing" secondItem="T9J-Bi-lPm" secondAttribute="trailing" id="OmB-mb-SPg"/>
+                            <constraint firstItem="gV8-Ns-B5K" firstAttribute="leading" secondItem="T9J-Bi-lPm" secondAttribute="leading" id="ZBd-Hy-mZ0"/>
+                            <constraint firstItem="0kf-pv-3Qo" firstAttribute="trailing" secondItem="T9J-Bi-lPm" secondAttribute="trailing" id="ZYw-5b-MOX"/>
+                            <constraint firstItem="0kf-pv-3Qo" firstAttribute="centerX" secondItem="1vb-ch-wiq" secondAttribute="centerX" id="bZm-9z-4PG"/>
+                            <constraint firstItem="gV8-Ns-B5K" firstAttribute="bottom" secondItem="T9J-Bi-lPm" secondAttribute="bottom" id="fSa-WQ-oOG"/>
+                            <constraint firstItem="gV8-Ns-B5K" firstAttribute="top" secondItem="1vb-ch-wiq" secondAttribute="top" id="zHh-oo-Mpv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T9J-Bi-lPm"/>
+                    </view>
+                    <connections>
+                        <outlet property="addPlanetButton" destination="0kf-pv-3Qo" id="cqH-2E-HOc"/>
+                        <outlet property="sceneView" destination="gV8-Ns-B5K" id="3ko-DN-Jh9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
