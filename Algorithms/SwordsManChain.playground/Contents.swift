@@ -49,13 +49,16 @@ class SwordsChain{
  
  */
 
-let swordsChain1 = SwordsChain.init()
-for index in 2...100{ // change 100 to total number of swordsmen you want
-    swordsChain1.addNextSwordsMan(index)
+func testTheChain(totalMen:Int){
+    let swordsChain1 = SwordsChain.init()
+    for index in 2...totalMen{ // change totalMen to total number of swordsmen you want
+        swordsChain1.addNextSwordsMan(index)
+    }
+    swordsChain1.completeTheCircle()
+    //start killing
+    while !swordsChain1.isKillingCompleted {
+        swordsChain1.killNextSwordsMan()
+    }
+    print("Killing completed. Index \(swordsChain1.firstMan.index) is the only one left." )
 }
-swordsChain1.completeTheCircle()
-//start killing
-while !swordsChain1.isKillingCompleted {
-    swordsChain1.killNextSwordsMan()
-}
-print("Killing completed. Index \(swordsChain1.firstMan.index) is the only one left." )
+testTheChain(totalMen: 100)
