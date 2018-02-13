@@ -1,19 +1,19 @@
 ## Description  
-You're in a building with m floors and you are given n eggs. What is the maximum number of attempts it will take to find out the floor that breaks the egg?
+You're in a building with *m* floors and you are given *n* eggs. What is the maximum number of attempts it will take to find out the floor that breaks the egg?
 
 For convenience, here are a few rules to keep in mind:  
 
-   An egg that survives a fall can be used again.  
-   A broken egg must be discarded.  
-   The effect of a fall is the same for all eggs.  
-   If an egg breaks, then it would break if dropped from a higher floor.  
-   If an egg survives, then it would survive a shorter fall.  
+>   An egg that survives a fall can be used again.  
+>   A broken egg must be discarded.  
+>   The effect of a fall is the same for all eggs.  
+>   If an egg breaks, then it would break if dropped from a higher floor.  
+>  If an egg survives, then it would survive a shorter fall.  
 ## Solution  
-eggNumber -> Number of eggs at the moment  
-floorNumber -> Floor number at the moment  
-visitingFloor -> Floor being visited at the moment  
-attempts -> Minimum number of attempts it will take to find out from which floor egg will break  
-We store all the solutions in a 2D array. Where rows represents number of eggs and columns represent number of floors.
+> eggNumber -> Number of eggs at the moment  
+> floorNumber -> Floor number at the moment  
+> visitingFloor -> Floor being visited at the moment  
+> attempts -> Minimum number of attempts it will take to find out from which floor egg will break  
+> We store all the solutions in a 2D array. Where rows represents number of eggs and columns represent number of floors.
 
 First, we set base cases:
 
